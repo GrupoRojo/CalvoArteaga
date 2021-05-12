@@ -1,0 +1,4 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MaestraAnidada.master.cs" Inherits="ClienteWeb.Privado.MaestraAnidada" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div>Maestra Anidada</div>
+</asp:Content>

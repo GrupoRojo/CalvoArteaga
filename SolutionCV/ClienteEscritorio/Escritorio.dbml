@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BDCVFormal" Class="EscritorioDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=BDCVFormal;Integrated Security=True" SettingsObjectName="ClienteEscritorio.Properties.Settings" SettingsPropertyName="BDCVFormalConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TCorreo" Member="TCorreo">
+    <Type Name="TCorreo">
+      <Column Name="CodCorreo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Vision" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CodCuenta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TCuenta_TCorreo" Member="TCuenta" ThisKey="CodCuenta" OtherKey="CodCuenta" Type="TCuenta" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.THabilidad" Member="THabilidad">
+    <Type Name="THabilidad">
+      <Column Name="CodHabilidad" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Vision" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Nivel" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CodCuenta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TCuenta_THabilidad" Member="TCuenta" ThisKey="CodCuenta" OtherKey="CodCuenta" Type="TCuenta" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TCuenta" Member="TCuenta">
+    <Type Name="TCuenta">
+      <Column Name="CodCuenta" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CorreoSeguro" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Contrasena" Type="System.Data.Linq.Binary" DbType="VarBinary(200) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Estado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Seudonimo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Llave" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="TCuenta_TCorreo" Member="TCorreo" ThisKey="CodCuenta" OtherKey="CodCuenta" Type="TCorreo" />
+      <Association Name="TCuenta_THabilidad" Member="THabilidad" ThisKey="CodCuenta" OtherKey="CodCuenta" Type="THabilidad" />
+      <Association Name="TCuenta_TEstudio" Member="TEstudio" ThisKey="CodCuenta" OtherKey="CodCuenta" Type="TEstudio" />
+      <Association Name="TCuenta_TTelefono" Member="TTelefono" ThisKey="CodCuenta" OtherKey="CodCuenta" Type="TTelefono" />
+      <Association Name="TCuenta_TInfo" Member="TInfo" ThisKey="CodCuenta" OtherKey="CodCuenta" Type="TInfo" />
+      <Association Name="TCuenta_TRedSocial" Member="TRedSocial" ThisKey="CodCuenta" OtherKey="CodCuenta" Type="TRedSocial" />
+      <Association Name="TCuenta_TTrabajo" Member="TTrabajo" ThisKey="CodCuenta" OtherKey="CodCuenta" Type="TTrabajo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TEstudio" Member="TEstudio">
+    <Type Name="TEstudio">
+      <Column Name="CodEstudio" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Vision" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Institucion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Facultad" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Carrera" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Inicio" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Fin" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CodCuenta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TCuenta_TEstudio" Member="TCuenta" ThisKey="CodCuenta" OtherKey="CodCuenta" Type="TCuenta" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TTelefono" Member="TTelefono">
+    <Type Name="TTelefono">
+      <Column Name="CodTelefono" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Vision" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Numero" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CodCuenta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TCuenta_TTelefono" Member="TCuenta" ThisKey="CodCuenta" OtherKey="CodCuenta" Type="TCuenta" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TInfo" Member="TInfo">
+    <Type Name="TInfo">
+      <Column Name="CodInfo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Apellidos" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Nombres" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Nacimiento" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Sexo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="EstadoCivil" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DNI" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Informacion" Type="System.String" DbType="VarChar(900)" CanBeNull="true" />
+      <Column Name="Foto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CodUbigeo" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="CodCuenta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TCuenta_TInfo" Member="TCuenta" ThisKey="CodCuenta" OtherKey="CodCuenta" Type="TCuenta" IsForeignKey="true" />
+      <Association Name="TUbigeo_TInfo" Member="TUbigeo" ThisKey="CodUbigeo" OtherKey="CodUbigeo" Type="TUbigeo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRedSocial" Member="TRedSocial">
+    <Type Name="TRedSocial">
+      <Column Name="CodRedSocial" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Vision" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Ruta" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CodCuenta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TCuenta_TRedSocial" Member="TCuenta" ThisKey="CodCuenta" OtherKey="CodCuenta" Type="TCuenta" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TUbigeo" Member="TUbigeo">
+    <Type Name="TUbigeo">
+      <Column Name="CodUbigeo" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodDepartamento" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CodProvincia" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CodDistrito" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="NomDepartamento" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NomProvincia" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NomDistrito" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="TUbigeo_TInfo" Member="TInfo" ThisKey="CodUbigeo" OtherKey="CodUbigeo" Type="TInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TTrabajo" Member="TTrabajo">
+    <Type Name="TTrabajo">
+      <Column Name="CodTrabajo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Vision" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Empresa" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Puesto" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Supervisor" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Inicio" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Fin" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CodCuenta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TCuenta_TTrabajo" Member="TCuenta" ThisKey="CodCuenta" OtherKey="CodCuenta" Type="TCuenta" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

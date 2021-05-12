@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 19.875" name="Escritorio">
+  <DataContextMoniker Name="/EscritorioDataContext" />
+  <nestedChildShapes>
+    <classShape Id="af7f78e6-d941-4bca-96dd-72f95aaf4edc" absoluteBounds="3.5, 4.125, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/EscritorioDataContext/TCorreo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="251e5cd9-4a03-4aaf-a3d8-35c5e3452ad0" absoluteBounds="3.515, 4.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="afa34cea-5931-4744-935f-b3346789a3ed" absoluteBounds="3.5, 6.625, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/EscritorioDataContext/THabilidad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76bfa838-03c7-4e67-a39a-92625bffa177" absoluteBounds="3.515, 7.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ae4c51ab-2147-4fb5-8c31-cd386d3078da" absoluteBounds="0.75, 10.625, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/EscritorioDataContext/TCuenta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c522c986-c93c-4033-8b57-7a89fab61054" absoluteBounds="0.765, 11.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="39589b8b-e4e5-4406-acb1-1dccc18ee934" absoluteBounds="3.5, 14.125, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/EscritorioDataContext/TEstudio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7cd7ed9a-5caa-4564-962f-df349db90341" absoluteBounds="3.515, 14.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="203470ca-83d8-4331-8cde-433160980fdd" absoluteBounds="3.5, 9.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/EscritorioDataContext/TTelefono" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e738e6b-d7a4-466a-8b7b-c74baf3bb0a1" absoluteBounds="3.515, 9.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3496ccbe-aa4a-4467-8bc0-b5ff51e9c3e6" absoluteBounds="6.5, 10.25, 2, 3.1170068359374987">
+      <DataClassMoniker Name="/EscritorioDataContext/TInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c87b10a-6ae7-4bd4-9344-3ef79d20cf83" absoluteBounds="6.515, 10.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62280d3c-ecb1-4b0c-a603-351a65cca8ba" absoluteBounds="3.5, 11.625, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/EscritorioDataContext/TRedSocial" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7ac4ec2-bc56-487e-879b-2993f71b644c" absoluteBounds="3.515, 12.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cafaf3e5-3163-4eaa-ab50-09794cb4d05f" absoluteBounds="3.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EscritorioDataContext/TUbigeo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="09810267-c00c-42eb-aa4f-8a6f938b8be3" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd41aca6-3503-4b34-ad1c-23de2a559f4f" absoluteBounds="3.5, 17.25, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/EscritorioDataContext/TTrabajo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05fa373c-1cd6-474a-b32d-d17779eded89" absoluteBounds="3.515, 17.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 10.625); (1.75 : 5.01044840494792); (3.5 : 5.01044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EscritorioDataContext/TCuenta/TCuenta_TCorreo" />
+      <nodes>
+        <classShapeMoniker Id="ae4c51ab-2147-4fb5-8c31-cd386d3078da" />
+        <classShapeMoniker Id="af7f78e6-d941-4bca-96dd-72f95aaf4edc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 10.625); (2.2812525 : 7.51044840494792); (3.5 : 7.51044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EscritorioDataContext/TCuenta/TCuenta_THabilidad" />
+      <nodes>
+        <classShapeMoniker Id="ae4c51ab-2147-4fb5-8c31-cd386d3078da" />
+        <classShapeMoniker Id="afa34cea-5931-4744-935f-b3346789a3ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 12.9728011067708); (1.75 : 15.2989005533854); (2.19791916666667 : 15.2989005533854 : JumpStart); (2.36458583333333 : 15.2989005533854 : JumpEnd); (3.5 : 15.2989005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EscritorioDataContext/TCuenta/TCuenta_TEstudio" />
+      <nodes>
+        <classShapeMoniker Id="ae4c51ab-2147-4fb5-8c31-cd386d3078da" />
+        <classShapeMoniker Id="39589b8b-e4e5-4406-acb1-1dccc18ee934" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 10.625); (1.2187475 : 9.8437475); (1.66666666666667 : 9.8437475 : JumpStart); (1.83333333333333 : 9.8437475 : JumpEnd); (2.19791916666667 : 9.8437475 : JumpStart); (2.36458583333333 : 9.8437475 : JumpEnd); (3.5 : 9.8437475)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EscritorioDataContext/TCuenta/TCuenta_TTelefono" />
+      <nodes>
+        <classShapeMoniker Id="ae4c51ab-2147-4fb5-8c31-cd386d3078da" />
+        <classShapeMoniker Id="203470ca-83d8-4331-8cde-433160980fdd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 11.2604484049479); (6.5 : 11.2604484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EscritorioDataContext/TCuenta/TCuenta_TInfo" />
+      <nodes>
+        <classShapeMoniker Id="ae4c51ab-2147-4fb5-8c31-cd386d3078da" />
+        <classShapeMoniker Id="3496ccbe-aa4a-4467-8bc0-b5ff51e9c3e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 12.2989005533854); (3.5 : 12.2989005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EscritorioDataContext/TCuenta/TCuenta_TRedSocial" />
+      <nodes>
+        <classShapeMoniker Id="ae4c51ab-2147-4fb5-8c31-cd386d3078da" />
+        <classShapeMoniker Id="62280d3c-ecb1-4b0c-a603-351a65cca8ba" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 2.90549967447917); (5.65625 : 11.0781701074219); (6.5 : 11.0781701074219)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EscritorioDataContext/TUbigeo/TUbigeo_TInfo" />
+      <nodes>
+        <classShapeMoniker Id="cafaf3e5-3163-4eaa-ab50-09794cb4d05f" />
+        <classShapeMoniker Id="3496ccbe-aa4a-4467-8bc0-b5ff51e9c3e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 12.9728011067708); (2.2812525 : 18.4239005533854); (3.5 : 18.4239005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EscritorioDataContext/TCuenta/TCuenta_TTrabajo" />
+      <nodes>
+        <classShapeMoniker Id="ae4c51ab-2147-4fb5-8c31-cd386d3078da" />
+        <classShapeMoniker Id="dd41aca6-3503-4b34-ad1c-23de2a559f4f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

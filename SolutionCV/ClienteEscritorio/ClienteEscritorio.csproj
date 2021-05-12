@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2389E72F-0E48-43A4-9F86-433D5607A909}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ClienteEscritorio</RootNamespace>
+    <AssemblyName>ClienteEscritorio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Consultaconjoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultaconjoin.Designer.cs">
+      <DependentUpon>Consultaconjoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultalamba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultalamba.Designer.cs">
+      <DependentUpon>consultalamba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultaparcial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultaparcial.Designer.cs">
+      <DependentUpon>consultaparcial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultaProyeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultaProyeccion.Designer.cs">
+      <DependentUpon>consultaProyeccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contrata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contrata.Designer.cs">
+      <DependentUpon>Contrata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="correos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="correos.Designer.cs">
+      <DependentUpon>correos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuenta.Designer.cs">
+      <DependentUpon>Cuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Escritorio.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Escritorio.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="estudios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="estudios.Designer.cs">
+      <DependentUpon>estudios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="habilidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="habilidades.Designer.cs">
+      <DependentUpon>habilidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="informacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="informacion.Designer.cs">
+      <DependentUpon>informacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="join1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="join1.Designer.cs">
+      <DependentUpon>join1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="join2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="join2.Designer.cs">
+      <DependentUpon>join2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="join3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="join3.Designer.cs">
+      <DependentUpon>join3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="join4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="join4.Designer.cs">
+      <DependentUpon>join4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="join5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="join5.Designer.cs">
+      <DependentUpon>join5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="join6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="join6.Designer.cs">
+      <DependentUpon>join6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lamda1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lamda1.Designer.cs">
+      <DependentUpon>lamda1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lamda2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lamda2.Designer.cs">
+      <DependentUpon>lamda2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lamda3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lamda3.Designer.cs">
+      <DependentUpon>lamda3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lamda4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lamda4.Designer.cs">
+      <DependentUpon>lamda4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lamda5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lamda5.Designer.cs">
+      <DependentUpon>lamda5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lamda6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lamda6.Designer.cs">
+      <DependentUpon>lamda6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelDeControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelDeControl.Designer.cs">
+      <DependentUpon>PanelDeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parcial1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parcial1.Designer.cs">
+      <DependentUpon>parcial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parcial2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parcial2.Designer.cs">
+      <DependentUpon>parcial2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parcial3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parcial3.Designer.cs">
+      <DependentUpon>parcial3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parcial4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parcial4.Designer.cs">
+      <DependentUpon>parcial4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parcial5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parcial5.Designer.cs">
+      <DependentUpon>parcial5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parcial6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parcial6.Designer.cs">
+      <DependentUpon>parcial6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="proyeccion1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="proyeccion1.Designer.cs">
+      <DependentUpon>proyeccion1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="proyeccion2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="proyeccion2.Designer.cs">
+      <DependentUpon>proyeccion2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="redesSociales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="redesSociales.Designer.cs">
+      <DependentUpon>redesSociales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registrarse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrarse.Designer.cs">
+      <DependentUpon>Registrarse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCorreo.cs" />
+    <Compile Include="TCuenta.cs" />
+    <Compile Include="Telefonos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telefonos.Designer.cs">
+      <DependentUpon>Telefonos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEstudio.cs" />
+    <Compile Include="THabilidad.cs" />
+    <Compile Include="TInfo.cs" />
+    <Compile Include="trabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trabajo.Designer.cs">
+      <DependentUpon>trabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TRedSocial.cs" />
+    <EmbeddedResource Include="Consultaconjoin.resx">
+      <DependentUpon>Consultaconjoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultalamba.resx">
+      <DependentUpon>consultalamba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultaparcial.resx">
+      <DependentUpon>consultaparcial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultaProyeccion.resx">
+      <DependentUpon>consultaProyeccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contrata.resx">
+      <DependentUpon>Contrata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="correos.resx">
+      <DependentUpon>correos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuenta.resx">
+      <DependentUpon>Cuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="estudios.resx">
+      <DependentUpon>estudios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="habilidades.resx">
+      <DependentUpon>habilidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="informacion.resx">
+      <DependentUpon>informacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="join1.resx">
+      <DependentUpon>join1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="join2.resx">
+      <DependentUpon>join2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="join3.resx">
+      <DependentUpon>join3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="join4.resx">
+      <DependentUpon>join4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="join5.resx">
+      <DependentUpon>join5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="join6.resx">
+      <DependentUpon>join6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lamda1.resx">
+      <DependentUpon>lamda1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lamda2.resx">
+      <DependentUpon>lamda2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lamda3.resx">
+      <DependentUpon>lamda3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lamda4.resx">
+      <DependentUpon>lamda4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lamda5.resx">
+      <DependentUpon>lamda5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lamda6.resx">
+      <DependentUpon>lamda6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelDeControl.resx">
+      <DependentUpon>PanelDeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parcial1.resx">
+      <DependentUpon>parcial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parcial2.resx">
+      <DependentUpon>parcial2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parcial3.resx">
+      <DependentUpon>parcial3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parcial4.resx">
+      <DependentUpon>parcial4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parcial5.resx">
+      <DependentUpon>parcial5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parcial6.resx">
+      <DependentUpon>parcial6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="proyeccion1.resx">
+      <DependentUpon>proyeccion1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="proyeccion2.resx">
+      <DependentUpon>proyeccion2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="redesSociales.resx">
+      <DependentUpon>redesSociales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telefonos.resx">
+      <DependentUpon>Telefonos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trabajo.resx">
+      <DependentUpon>trabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Escritorio.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Escritorio.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Escritorio.dbml.layout">
+      <DependentUpon>Escritorio.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\fondo.jpg" />
+    <Content Include="img\ima1.jpg" />
+    <Content Include="img\ima2.jpg" />
+    <Content Include="img\ima3.jpg" />
+    <Content Include="img\rojo1.jpg" />
+    <None Include="Resources\charla.jpg" />
+    <None Include="Resources\rojo1.jpg" />
+    <None Include="Resources\ima3.jpg" />
+    <None Include="Resources\ima2.jpg" />
+    <None Include="Resources\ima1.jpg" />
+    <None Include="Resources\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="EstudioListar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstudioListarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EstudioListarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstudioInsertar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Vision" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Institucion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Facultad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Carrera" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstudioInsertarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EstudioInsertarResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EstudioActualizar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodEstudio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Vision" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Institucion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Facultad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Carrera" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstudioActualizarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EstudioActualizarResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstudioEliminar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodEstudio" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstudioEliminarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EstudioEliminarResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrabajoListar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrabajoListarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TrabajoListarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrabajoInsertar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Vision" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Empresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Puesto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supervisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Inicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrabajoInsertarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TrabajoInsertarResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrabajoActualizar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodTrabajo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Vision" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Empresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Puesto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supervisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Inicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrabajoActualizarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TrabajoActualizarResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrabajoEliminar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodTrabajo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrabajoEliminarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TrabajoEliminarResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EstudioListarSoapIn">
+    <wsdl:part name="parameters" element="tns:EstudioListar" />
+  </wsdl:message>
+  <wsdl:message name="EstudioListarSoapOut">
+    <wsdl:part name="parameters" element="tns:EstudioListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="EstudioInsertarSoapIn">
+    <wsdl:part name="parameters" element="tns:EstudioInsertar" />
+  </wsdl:message>
+  <wsdl:message name="EstudioInsertarSoapOut">
+    <wsdl:part name="parameters" element="tns:EstudioInsertarResponse" />
+  </wsdl:message>
+  <wsdl:message name="EstudioActualizarSoapIn">
+    <wsdl:part name="parameters" element="tns:EstudioActualizar" />
+  </wsdl:message>
+  <wsdl:message name="EstudioActualizarSoapOut">
+    <wsdl:part name="parameters" element="tns:EstudioActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="EstudioEliminarSoapIn">
+    <wsdl:part name="parameters" element="tns:EstudioEliminar" />
+  </wsdl:message>
+  <wsdl:message name="EstudioEliminarSoapOut">
+    <wsdl:part name="parameters" element="tns:EstudioEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TrabajoListarSoapIn">
+    <wsdl:part name="parameters" element="tns:TrabajoListar" />
+  </wsdl:message>
+  <wsdl:message name="TrabajoListarSoapOut">
+    <wsdl:part name="parameters" element="tns:TrabajoListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TrabajoInsertarSoapIn">
+    <wsdl:part name="parameters" element="tns:TrabajoInsertar" />
+  </wsdl:message>
+  <wsdl:message name="TrabajoInsertarSoapOut">
+    <wsdl:part name="parameters" element="tns:TrabajoInsertarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TrabajoActualizarSoapIn">
+    <wsdl:part name="parameters" element="tns:TrabajoActualizar" />
+  </wsdl:message>
+  <wsdl:message name="TrabajoActualizarSoapOut">
+    <wsdl:part name="parameters" element="tns:TrabajoActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TrabajoEliminarSoapIn">
+    <wsdl:part name="parameters" element="tns:TrabajoEliminar" />
+  </wsdl:message>
+  <wsdl:message name="TrabajoEliminarSoapOut">
+    <wsdl:part name="parameters" element="tns:TrabajoEliminarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioCV2Soap">
+    <wsdl:operation name="EstudioListar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EstudioListar</wsdl:documentation>
+      <wsdl:input message="tns:EstudioListarSoapIn" />
+      <wsdl:output message="tns:EstudioListarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EstudioInsertar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EstudioInsertar</wsdl:documentation>
+      <wsdl:input message="tns:EstudioInsertarSoapIn" />
+      <wsdl:output message="tns:EstudioInsertarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EstudioActualizar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EstudioActualizar</wsdl:documentation>
+      <wsdl:input message="tns:EstudioActualizarSoapIn" />
+      <wsdl:output message="tns:EstudioActualizarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EstudioEliminar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EstudioEliminar</wsdl:documentation>
+      <wsdl:input message="tns:EstudioEliminarSoapIn" />
+      <wsdl:output message="tns:EstudioEliminarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TrabajoListar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">TrabajoListar</wsdl:documentation>
+      <wsdl:input message="tns:TrabajoListarSoapIn" />
+      <wsdl:output message="tns:TrabajoListarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TrabajoInsertar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">TrabajoInsertar</wsdl:documentation>
+      <wsdl:input message="tns:TrabajoInsertarSoapIn" />
+      <wsdl:output message="tns:TrabajoInsertarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TrabajoActualizar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">TrabajoActualizar</wsdl:documentation>
+      <wsdl:input message="tns:TrabajoActualizarSoapIn" />
+      <wsdl:output message="tns:TrabajoActualizarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TrabajoEliminar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">TrabajoEliminar</wsdl:documentation>
+      <wsdl:input message="tns:TrabajoEliminarSoapIn" />
+      <wsdl:output message="tns:TrabajoEliminarSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioCV2Soap" type="tns:ServicioCV2Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EstudioListar">
+      <soap:operation soapAction="http://tempuri.org/EstudioListar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstudioInsertar">
+      <soap:operation soapAction="http://tempuri.org/EstudioInsertar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstudioActualizar">
+      <soap:operation soapAction="http://tempuri.org/EstudioActualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstudioEliminar">
+      <soap:operation soapAction="http://tempuri.org/EstudioEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrabajoListar">
+      <soap:operation soapAction="http://tempuri.org/TrabajoListar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrabajoInsertar">
+      <soap:operation soapAction="http://tempuri.org/TrabajoInsertar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrabajoActualizar">
+      <soap:operation soapAction="http://tempuri.org/TrabajoActualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrabajoEliminar">
+      <soap:operation soapAction="http://tempuri.org/TrabajoEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioCV2Soap12" type="tns:ServicioCV2Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EstudioListar">
+      <soap12:operation soapAction="http://tempuri.org/EstudioListar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstudioInsertar">
+      <soap12:operation soapAction="http://tempuri.org/EstudioInsertar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstudioActualizar">
+      <soap12:operation soapAction="http://tempuri.org/EstudioActualizar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstudioEliminar">
+      <soap12:operation soapAction="http://tempuri.org/EstudioEliminar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrabajoListar">
+      <soap12:operation soapAction="http://tempuri.org/TrabajoListar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrabajoInsertar">
+      <soap12:operation soapAction="http://tempuri.org/TrabajoInsertar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrabajoActualizar">
+      <soap12:operation soapAction="http://tempuri.org/TrabajoActualizar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrabajoEliminar">
+      <soap12:operation soapAction="http://tempuri.org/TrabajoEliminar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioCV2">
+    <wsdl:port name="ServicioCV2Soap" binding="tns:ServicioCV2Soap">
+      <soap:address location="https://localhost:44385/ServicioCV2.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioCV2Soap12" binding="tns:ServicioCV2Soap12">
+      <soap12:address location="https://localhost:44385/ServicioCV2.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,33 @@
+F:\juliano\AMega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaNegocio.dll
+F:\juliano\AMega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaNegocio.pdb
+F:\juliano\AMega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaDatos.dll
+F:\juliano\AMega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaEntidad.dll
+F:\juliano\AMega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaDatos.pdb
+F:\juliano\AMega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaEntidad.pdb
+F:\juliano\AMega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+F:\juliano\AMega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+F:\juliano\AMega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+F:\juliano\AMega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.dll
+F:\juliano\AMega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.pdb
+E:\001 Mega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaNegocio.dll
+E:\001 Mega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaNegocio.pdb
+E:\001 Mega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaDatos.dll
+E:\001 Mega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaEntidad.dll
+E:\001 Mega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaDatos.pdb
+E:\001 Mega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaEntidad.pdb
+E:\001 Mega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+E:\001 Mega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+E:\001 Mega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+E:\001 Mega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.dll
+E:\001 Mega\UAC\01 Plataforma - Hugo\Proyectos VS2019\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\USUARIO\Desktop\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\USUARIO\Desktop\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\USUARIO\Desktop\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\USUARIO\Desktop\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\USUARIO\Desktop\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\USUARIO\Desktop\ReactivaPeru2\SolutionCV\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\USUARIO\Desktop\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+C:\Users\USUARIO\Desktop\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\USUARIO\Desktop\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\USUARIO\Desktop\ReactivaPeru2\SolutionCV\CapaNegocio\obj\Debug\CapaNegocio.pdb

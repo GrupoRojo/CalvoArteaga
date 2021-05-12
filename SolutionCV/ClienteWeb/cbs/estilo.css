@@ -1,0 +1,304 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Consolas;
+    background-image: url("fondo1.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+@media (max-width: 1100px) {
+    body {
+        background-image: url("fondo2.jpg");
+    }
+}
+@media (max-width: 700px){
+    body {
+        background-image: url("fondo3.jpg");
+    }
+}
+/* Caja */
+.caja {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Lado Izquierdo */
+    .caja .lado1 {
+        flex: 30%;
+        padding: 5px;
+        min-height: 100px;
+    }
+
+/* Lado Derecho */
+    .caja .lado2 {
+        flex: 70%;
+        /*background-color: rgba(2, 2, 2, 0.1);*/
+        padding: 20px 5px 0 5px;
+        min-height: 100px;
+    }
+/* cuando es menos de 700px */
+@media (max-width: 640px) {
+    .caja .lado1 {
+        flex: 40%;
+    }
+
+    .caja .lado2 {
+        flex: 60%;
+    }
+}
+
+
+.rojo1 {
+    display: block;
+    background-image: url("rojo1.jpg");
+    background-size: 110% 110%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 60px;
+    height: 60px;
+    font-size: 0px;
+    border-radius: 10px;
+    float: left;
+}
+
+.nombre {
+    float: left;
+    color: white;
+    margin: 20px 10px;
+    text-decoration: none;
+}
+
+.nombre:hover {
+    text-decoration: none;
+    color: wheat;
+}
+.nombre:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.menu1 a {
+    display: block;
+    text-decoration: none;
+    color: navajowhite;
+    padding: 10px 20px;
+    float: right;
+    text-transform: uppercase;
+    }
+
+.menu1 a:hover {
+    background-color: rgba(2, 2, 2, 0.3);
+    color: white;
+    border-radius: 30px;
+}
+
+
+
+@media (max-width: 700px) {
+    .menu1 a {
+        float: none;
+        width: 100px;
+        margin: 5px 10px 5px auto;
+        padding: 5px;
+        text-align: center;
+    }
+}
+
+/* Caja */
+.caja2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.caja2 .lado1 {
+    flex: 33%;
+    min-height: 100px;
+}
+.caja2 .lado2 {
+    flex: 33%;
+    min-height: 100px;
+}
+.caja2 .lado3 {
+    flex: 33%;
+    min-height: 100px;
+}
+.ima1 {
+    display: block;
+    width: 90%;
+    height: 550px;
+    margin: 20px auto;
+    background-image: url("ima1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: -3px -3px 15px #000000;
+    padding-top: 80%;
+}
+.ima2 {
+    display: block;
+    width: 90%;
+    height: 550px;
+    margin: 20px auto;
+    background-image: url("ima2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0px 3px 15px #000000;
+    padding-top: 80%;
+}
+.ima3 {
+    display: block;
+    width: 90%;
+    height: 550px;
+    margin: 20px auto;
+    background-image: url("ima3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 3px 3px 15px #000000;
+    padding-top: 80%;
+}
+.ima1:hover, .ima2:hover, .ima3:hover {
+    text-decoration: none;
+}
+.caja2 .tit {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 0px 3px 5px #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+.caja2 p {
+    color: wheat;
+    text-align: center;
+    font-size: 17px;
+    text-shadow: 0px 3px 5px #000000;
+}
+.caja2 .tit:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+@media (max-width: 1200px) {
+    .ima1, .ima2, .ima3 {
+        height: 450px;
+    }
+}
+@media (max-width: 995px) {
+    .ima1, .ima2, .ima3 {
+        height: 330px;
+    }
+}
+@media (max-width: 995px) {
+    .ima1, .ima2, .ima3 {
+        height: 330px;
+    }
+}
+@media (max-width: 610px) {
+    .ima1, .ima2, .ima3 {
+        height: 250px;
+    }
+}
+
+.nos1 {
+    background-image: url("nos1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    float: right;
+}
+.nos2 {
+    background-image: url("nos2.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+}
+.nos3 {
+    background-image: url("nos3.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    float: right;
+}
+.nos4 {
+    background-image: url("nos4.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+}
+.nosInfo {
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.registro {
+    width: 400px;
+    margin: 5px auto;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 10px;
+    padding: 20px 20px 20px 60px;
+}
+
+.ingreso {
+    width: 400px;
+    margin: 5px auto;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 10px;
+    padding: 20px 20px 20px 60px;
+}
+.documento {
+    background-color: black;
+    display: block;
+    width: 80%;
+    height: 1000px;
+    margin: 5px auto;
+    border-radius: 10px;
+}
+.documento2 {
+    background-color: black;
+    display: block;
+    width: 80%;
+    height: 700px;
+    margin: 5px auto;
+    border-radius: 10px;
+}
+.tabla {
+    background-color: white;
+    display: block;
+    width: 500px;
+    margin: 5px auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+.blanco1 {
+    background-color: white;
+    padding: 20px;
+}
+.persona{
+    border: 2px solid red;
+    width: 200px;
+    float: left;
+    margin: 10px;
+}
+.limpia{
+    clear: both;
+}
+.personaFoto{
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+}

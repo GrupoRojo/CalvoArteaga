@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CuentaExiste">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario_o_Correo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contrasena" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaExisteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CuentaExisteResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CuentaInformacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaInformacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CuentaInformacionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaAgregar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CorreoSeguro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contrasena" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaAgregarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CuentaAgregarResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaDesactivar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaDesactivarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CuentaDesactivarResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaReactivar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaReactivarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CuentaReactivarResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaActualizarContrasena">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contrasena" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContrasenaNueva" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaActualizarContrasenaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CuentaActualizarContrasenaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaActualizarSeudonimo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Seudonimo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaActualizarSeudonimoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CuentaActualizarSeudonimoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaActualizarLlave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Llave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaActualizarLlaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CuentaActualizarLlaveResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InfoListar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InfoListarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InfoListarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InfoActualizar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Apellidos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombres" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nacimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sexo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EstadoCivil" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DNI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Informacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InfoActualizarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InfoActualizarResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InfoActualizarImagen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Foto" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodCuenta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InfoActualizarImagenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InfoActualizarImagenResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UbigeoDepartamentos">
+        <s:complexType />
+      </s:element>
+      <s:element name="UbigeoDepartamentosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UbigeoDepartamentosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UbigeoProvincias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodDepartamento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UbigeoProvinciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UbigeoProvinciasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UbigeoDistritos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodDepartamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodProvincia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UbigeoDistritosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UbigeoDistritosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UbigeoLugar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodUbigeo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UbigeoLugarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UbigeoLugarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CuentaExisteSoapIn">
+    <wsdl:part name="parameters" element="tns:CuentaExiste" />
+  </wsdl:message>
+  <wsdl:message name="CuentaExisteSoapOut">
+    <wsdl:part name="parameters" element="tns:CuentaExisteResponse" />
+  </wsdl:message>
+  <wsdl:message name="CuentaInformacionSoapIn">
+    <wsdl:part name="parameters" element="tns:CuentaInformacion" />
+  </wsdl:message>
+  <wsdl:message name="CuentaInformacionSoapOut">
+    <wsdl:part name="parameters" element="tns:CuentaInformacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CuentaAgregarSoapIn">
+    <wsdl:part name="parameters" element="tns:CuentaAgregar" />
+  </wsdl:message>
+  <wsdl:message name="CuentaAgregarSoapOut">
+    <wsdl:part name="parameters" element="tns:CuentaAgregarResponse" />
+  </wsdl:message>
+  <wsdl:message name="CuentaDesactivarSoapIn">
+    <wsdl:part name="parameters" element="tns:CuentaDesactivar" />
+  </wsdl:message>
+  <wsdl:message name="CuentaDesactivarSoapOut">
+    <wsdl:part name="parameters" element="tns:CuentaDesactivarResponse" />
+  </wsdl:message>
+  <wsdl:message name="CuentaReactivarSoapIn">
+    <wsdl:part name="parameters" element="tns:CuentaReactivar" />
+  </wsdl:message>
+  <wsdl:message name="CuentaReactivarSoapOut">
+    <wsdl:part name="parameters" element="tns:CuentaReactivarResponse" />
+  </wsdl:message>
+  <wsdl:message name="CuentaActualizarContrasenaSoapIn">
+    <wsdl:part name="parameters" element="tns:CuentaActualizarContrasena" />
+  </wsdl:message>
+  <wsdl:message name="CuentaActualizarContrasenaSoapOut">
+    <wsdl:part name="parameters" element="tns:CuentaActualizarContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CuentaActualizarSeudonimoSoapIn">
+    <wsdl:part name="parameters" element="tns:CuentaActualizarSeudonimo" />
+  </wsdl:message>
+  <wsdl:message name="CuentaActualizarSeudonimoSoapOut">
+    <wsdl:part name="parameters" element="tns:CuentaActualizarSeudonimoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CuentaActualizarLlaveSoapIn">
+    <wsdl:part name="parameters" element="tns:CuentaActualizarLlave" />
+  </wsdl:message>
+  <wsdl:message name="CuentaActualizarLlaveSoapOut">
+    <wsdl:part name="parameters" element="tns:CuentaActualizarLlaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="InfoListarSoapIn">
+    <wsdl:part name="parameters" element="tns:InfoListar" />
+  </wsdl:message>
+  <wsdl:message name="InfoListarSoapOut">
+    <wsdl:part name="parameters" element="tns:InfoListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="InfoActualizarSoapIn">
+    <wsdl:part name="parameters" element="tns:InfoActualizar" />
+  </wsdl:message>
+  <wsdl:message name="InfoActualizarSoapOut">
+    <wsdl:part name="parameters" element="tns:InfoActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="InfoActualizarImagenSoapIn">
+    <wsdl:part name="parameters" element="tns:InfoActualizarImagen" />
+  </wsdl:message>
+  <wsdl:message name="InfoActualizarImagenSoapOut">
+    <wsdl:part name="parameters" element="tns:InfoActualizarImagenResponse" />
+  </wsdl:message>
+  <wsdl:message name="UbigeoDepartamentosSoapIn">
+    <wsdl:part name="parameters" element="tns:UbigeoDepartamentos" />
+  </wsdl:message>
+  <wsdl:message name="UbigeoDepartamentosSoapOut">
+    <wsdl:part name="parameters" element="tns:UbigeoDepartamentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="UbigeoProvinciasSoapIn">
+    <wsdl:part name="parameters" element="tns:UbigeoProvincias" />
+  </wsdl:message>
+  <wsdl:message name="UbigeoProvinciasSoapOut">
+    <wsdl:part name="parameters" element="tns:UbigeoProvinciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="UbigeoDistritosSoapIn">
+    <wsdl:part name="parameters" element="tns:UbigeoDistritos" />
+  </wsdl:message>
+  <wsdl:message name="UbigeoDistritosSoapOut">
+    <wsdl:part name="parameters" element="tns:UbigeoDistritosResponse" />
+  </wsdl:message>
+  <wsdl:message name="UbigeoLugarSoapIn">
+    <wsdl:part name="parameters" element="tns:UbigeoLugar" />
+  </wsdl:message>
+  <wsdl:message name="UbigeoLugarSoapOut">
+    <wsdl:part name="parameters" element="tns:UbigeoLugarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioCV1Soap">
+    <wsdl:operation name="CuentaExiste">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CuentaExiste</wsdl:documentation>
+      <wsdl:input message="tns:CuentaExisteSoapIn" />
+      <wsdl:output message="tns:CuentaExisteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CuentaInformacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CuentaInformacion</wsdl:documentation>
+      <wsdl:input message="tns:CuentaInformacionSoapIn" />
+      <wsdl:output message="tns:CuentaInformacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CuentaAgregar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CuentaAgregar</wsdl:documentation>
+      <wsdl:input message="tns:CuentaAgregarSoapIn" />
+      <wsdl:output message="tns:CuentaAgregarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CuentaDesactivar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CuentaDesactivar</wsdl:documentation>
+      <wsdl:input message="tns:CuentaDesactivarSoapIn" />
+      <wsdl:output message="tns:CuentaDesactivarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CuentaReactivar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CuentaReactivar</wsdl:documentation>
+      <wsdl:input message="tns:CuentaReactivarSoapIn" />
+      <wsdl:output message="tns:CuentaReactivarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CuentaActualizarContrasena">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CuentaActualizarContrasena</wsdl:documentation>
+      <wsdl:input message="tns:CuentaActualizarContrasenaSoapIn" />
+      <wsdl:output message="tns:CuentaActualizarContrasenaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CuentaActualizarSeudonimo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CuentaActualizarSeudonimo</wsdl:documentation>
+      <wsdl:input message="tns:CuentaActualizarSeudonimoSoapIn" />
+      <wsdl:output message="tns:CuentaActualizarSeudonimoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CuentaActualizarLlave">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CuentaActualizarLlave</wsdl:documentation>
+      <wsdl:input message="tns:CuentaActualizarLlaveSoapIn" />
+      <wsdl:output message="tns:CuentaActualizarLlaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InfoListar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InfoListar</wsdl:documentation>
+      <wsdl:input message="tns:InfoListarSoapIn" />
+      <wsdl:output message="tns:InfoListarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InfoActualizar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InfoActualizar</wsdl:documentation>
+      <wsdl:input message="tns:InfoActualizarSoapIn" />
+      <wsdl:output message="tns:InfoActualizarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InfoActualizarImagen">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InfoActualizarImagen</wsdl:documentation>
+      <wsdl:input message="tns:InfoActualizarImagenSoapIn" />
+      <wsdl:output message="tns:InfoActualizarImagenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UbigeoDepartamentos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UbigeoDepartamentos</wsdl:documentation>
+      <wsdl:input message="tns:UbigeoDepartamentosSoapIn" />
+      <wsdl:output message="tns:UbigeoDepartamentosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UbigeoProvincias">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UbigeoProvincias</wsdl:documentation>
+      <wsdl:input message="tns:UbigeoProvinciasSoapIn" />
+      <wsdl:output message="tns:UbigeoProvinciasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UbigeoDistritos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UbigeoDistritos</wsdl:documentation>
+      <wsdl:input message="tns:UbigeoDistritosSoapIn" />
+      <wsdl:output message="tns:UbigeoDistritosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UbigeoLugar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UbigeoLugar</wsdl:documentation>
+      <wsdl:input message="tns:UbigeoLugarSoapIn" />
+      <wsdl:output message="tns:UbigeoLugarSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioCV1Soap" type="tns:ServicioCV1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CuentaExiste">
+      <soap:operation soapAction="http://tempuri.org/CuentaExiste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaInformacion">
+      <soap:operation soapAction="http://tempuri.org/CuentaInformacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaAgregar">
+      <soap:operation soapAction="http://tempuri.org/CuentaAgregar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaDesactivar">
+      <soap:operation soapAction="http://tempuri.org/CuentaDesactivar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaReactivar">
+      <soap:operation soapAction="http://tempuri.org/CuentaReactivar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaActualizarContrasena">
+      <soap:operation soapAction="http://tempuri.org/CuentaActualizarContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaActualizarSeudonimo">
+      <soap:operation soapAction="http://tempuri.org/CuentaActualizarSeudonimo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaActualizarLlave">
+      <soap:operation soapAction="http://tempuri.org/CuentaActualizarLlave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InfoListar">
+      <soap:operation soapAction="http://tempuri.org/InfoListar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InfoActualizar">
+      <soap:operation soapAction="http://tempuri.org/InfoActualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InfoActualizarImagen">
+      <soap:operation soapAction="http://tempuri.org/InfoActualizarImagen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UbigeoDepartamentos">
+      <soap:operation soapAction="http://tempuri.org/UbigeoDepartamentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UbigeoProvincias">
+      <soap:operation soapAction="http://tempuri.org/UbigeoProvincias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UbigeoDistritos">
+      <soap:operation soapAction="http://tempuri.org/UbigeoDistritos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UbigeoLugar">
+      <soap:operation soapAction="http://tempuri.org/UbigeoLugar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioCV1Soap12" type="tns:ServicioCV1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CuentaExiste">
+      <soap12:operation soapAction="http://tempuri.org/CuentaExiste" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaInformacion">
+      <soap12:operation soapAction="http://tempuri.org/CuentaInformacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaAgregar">
+      <soap12:operation soapAction="http://tempuri.org/CuentaAgregar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaDesactivar">
+      <soap12:operation soapAction="http://tempuri.org/CuentaDesactivar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaReactivar">
+      <soap12:operation soapAction="http://tempuri.org/CuentaReactivar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaActualizarContrasena">
+      <soap12:operation soapAction="http://tempuri.org/CuentaActualizarContrasena" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaActualizarSeudonimo">
+      <soap12:operation soapAction="http://tempuri.org/CuentaActualizarSeudonimo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaActualizarLlave">
+      <soap12:operation soapAction="http://tempuri.org/CuentaActualizarLlave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InfoListar">
+      <soap12:operation soapAction="http://tempuri.org/InfoListar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InfoActualizar">
+      <soap12:operation soapAction="http://tempuri.org/InfoActualizar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InfoActualizarImagen">
+      <soap12:operation soapAction="http://tempuri.org/InfoActualizarImagen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UbigeoDepartamentos">
+      <soap12:operation soapAction="http://tempuri.org/UbigeoDepartamentos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UbigeoProvincias">
+      <soap12:operation soapAction="http://tempuri.org/UbigeoProvincias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UbigeoDistritos">
+      <soap12:operation soapAction="http://tempuri.org/UbigeoDistritos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UbigeoLugar">
+      <soap12:operation soapAction="http://tempuri.org/UbigeoLugar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioCV1">
+    <wsdl:port name="ServicioCV1Soap" binding="tns:ServicioCV1Soap">
+      <soap:address location="https://localhost:44385/ServicioCV1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioCV1Soap12" binding="tns:ServicioCV1Soap12">
+      <soap12:address location="https://localhost:44385/ServicioCV1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
